@@ -1,8 +1,7 @@
 module Api::V1
 
   class BooksController < ApplicationController
-    before_action :require_book, only: [:show]
-
+  
     def index
       if params[:query]
         data = BookWrapper.search(params[:query])
