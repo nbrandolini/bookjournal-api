@@ -11,7 +11,7 @@ module Api::V1
       render(
         status: :ok,
         json: @book.as_json(
-          only: [:title, :author, :imageLinks]
+          only: [:title, :author, :image_url, :status]
         )
       )
     end
