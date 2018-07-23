@@ -3,8 +3,9 @@ module Api::V1
   class BooksController < ApplicationController
 
     def index
-      @books = Book.all
+      @books= Book.all
       render json: @books
+      @read = Book.all.where(status:"read")
     end
 
     def show
